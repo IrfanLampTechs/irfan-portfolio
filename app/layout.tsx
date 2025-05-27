@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import StarsCanvas from './../components/main/StarBackground';
+import Navbar from "@/components/main/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +34,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} 
         ${inter.variable} antialiased bg-[#030014] overflow-scroll overflow-x-hidden`}
+        suppressHydrationWarning
       >
+
+        <StarsCanvas />
+        <Navbar />
         {children}
       </body>
     </html>
