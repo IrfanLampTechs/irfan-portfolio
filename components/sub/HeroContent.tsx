@@ -66,12 +66,20 @@ const HeroContent = () => {
         </motion.a>
       </div>
       <motion.div
-        variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center "
+        className="w-full h-full flex justify-center items-center"
+        animate={{
+          y: [0, -20, 0], // Move up (-20px) then back to original position
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "easeInOut",
+        }}
       >
         <Image
-        className="ml-20"
-          src="/mainIconsdark.svg"
+          className="ml-20"
+          src="/mainIconsdark 1 1 1 (1).svg"
           alt="work icons"
           height={600}
           width={600}
