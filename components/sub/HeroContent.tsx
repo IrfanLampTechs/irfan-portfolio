@@ -65,6 +65,19 @@ const HeroContent = () => {
           Learn More!
         </motion.a>
       </div>
+
+      {/* <motion.div
+        variants={slideInFromRight(0.8)}
+        className="w-full h-full flex justify-center items-center"
+      >
+        <Image
+          src="/mainIconsdark 1 1 1 (1).svg"
+          alt="work icons"
+          height={650}
+          width={650}
+        />
+      </motion.div> */}
+
       <motion.div
         className="w-full h-full flex justify-center items-center"
         animate={{
