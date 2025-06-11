@@ -13,7 +13,6 @@ const SkillText = () => {
   return (
     <div className="w-full h-auto flex flex-col justify-center">
 
-
       <motion.div
         variants={slideInFromTop}
         className="Welcome-box py-[8px] px-[12px] border border-[#7042f88b] opacity-[0.9] flex items-center justify-center mx-auto"
