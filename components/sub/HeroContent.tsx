@@ -2,86 +2,118 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 import {
   slideInFromLeft,
   slideInFromRight,
   slideInFromTop,
 } from "@/utils/motion";
-import { SparklesIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
+
 const HeroContent = () => {
   return (
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center
-    justify-center px-20 mt-24 w-full z-[20] "
+      className="flex flex-row items-center justify-center md:px-20 px-6 mt-10 sm:mt-28 w-full z-[10]"
     >
-      <div
-        className="h-full w-full flex flex-col
-      gap-5 justify-center m-auto text-start"
-      >
+      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
+        {/* Mobile-only Image - positioned properly */}
+        <motion.div
+          className="w-full flex justify-end pr-0 mt-10 items-center sm:hidden mb-2"
+          animate={{
+            y: [0, -10, 0],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+          }}
+        >
+          <Image
+            src="/mainIconsdark 1 1 1 (1).svg"
+            alt="work icons"
+            height={150}
+            width={150}
+          />
+        </motion.div>
+
         <motion.div
           variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+          className="mt-[-150px] flex flex-col gap-1 sm:gap-3 text-2xl sm:text-4xl md:text-5xl font-bold text-white max-w-[90%] sm:max-w-[100%] md:w-auto md:h-auto sm:w-full"
         >
-          <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-8" />
-          <h1 className="Welcome-text text-[13px]">
-            Fullstack Developer Portfolio
-          </h1>
+          <div>Hi, I am</div>
+          <div className="text-3xl sm:text-5xl md:text-6xl">Md. Irfan Azad</div>
         </motion.div>
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-6xl font-bold
-          text-white max-w-[600px] w-auto h-auto"
+          className="flex flex-col gap-3 mt-0 md:mt-1 text-lg sm:text-3xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span>
-            Providing
-            <span
-              className=" text-transparent bg-clip-text bg-gradient-to-r
-          from-purple-500 to-cyan-500"
-            >
-              {" "}
-              the best{" "}
+            I am a{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+              <Typewriter
+                words={[
+                  "Programmer",
+                  "Software Engineer",
+                  "Backend Developer",
+                  "Fronted Developer",
+                  "Full Stack Developer",
+                ]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
             </span>
-            project experience
           </span>
         </motion.div>
 
         <motion.p
           variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400  max-w-[600px]"
+          className="text-sm sm:text-lg text-gray-400 max-w-[600px]"
         >
-          I&apos;m a Full Stack Software Engineer with expreience in website,
-          Mobile, and software development. Check out my projects and skills.
+          I&apos;m a motivated and versatile individual, always eager to take on
+          new challenges. With a passion for learning, I am dedicated to
+          delivering high-quality results. With a positive attitude and a growth
+          mindset, I am ready to make a meaningful contribution and achieve
+          great things.
         </motion.p>
 
-        <motion.a
-          variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white
-          cursol-pointer rounded-lg max-w-[200px]"
-        >
-          Learn More!
-        </motion.a>
+        <div className="flex flex-wrap gap-2 sm:gap-4 mt-2">
+          <motion.a
+            variants={slideInFromLeft(1)}
+            className="py-2 px-4 sm:px-6 button-primary text-center text-white 
+              cursor-pointer rounded-lg text-sm sm:text-base"
+          >
+            Hire me
+          </motion.a>
+          <motion.a
+            variants={slideInFromLeft(1)}
+            className="py-2 px-4 sm:px-6 button-primary text-center text-white
+              cursor-pointer rounded-lg text-sm sm:text-base"
+          >
+            Contact me
+          </motion.a>
+          <motion.a
+            variants={slideInFromLeft(1)}
+            className="py-2 px-4 sm:px-6 button-primary text-center text-white
+              cursor-pointer rounded-lg text-sm sm:text-base"
+          >
+            Resume
+          </motion.a>
+        </div>
       </div>
 
-      {/* <motion.div
-        variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center"
-      >
-        <Image
-          src="/mainIconsdark 1 1 1 (1).svg"
-          alt="work icons"
-          height={650}
-          width={650}
-        />
-      </motion.div> */}
-
+      {/* Desktop Image */}
       <motion.div
-        className="w-full h-full flex justify-center items-center"
+        className="w-full h-full flex justify-center items-center hidden sm:flex"
         animate={{
-          y: [0, -20, 0], // Move up (-20px) then back to original position
+          y: [0, -20, 0],
         }}
         transition={{
           duration: 2,
