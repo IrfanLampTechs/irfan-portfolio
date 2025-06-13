@@ -14,21 +14,21 @@ const Navbar = () => {
           className="h-auto w-auto flex flex-row items-center"
         >
           <Image
-            src="/NavLogo.png"
+            src="/I_logo-2.png"
             alt="logo"
-            width={70}
-            height={70}
+            width={170}
+            height={160}
             className="cursor-pointer hover:animate-slowspin"
           />
 
-          <span
+          {/* <span
             className="font-bold ml-[10px] hidden
                 md:block text-gray-300"
           >
             WebChain Dev
-          </span>
+          </span> */}
         </a>
-        <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
+        <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-16 ">
           <div className=" flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
             <a href="#about-me" className="cousor-pointer">
               About me
@@ -44,13 +44,19 @@ const Navbar = () => {
 
         <div className="flex flex-row gap-5">
           {Socials.map((social) => (
-            <Image
-              src={social.src}
-              alt={social.name}
+            <a
               key={social.name}
-              width={24}
-              height={24}
-            />
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={social.src}
+                alt={social.name}
+                width={26}
+                height={26}
+              />
+            </a>
           ))}
         </div>
       </div>
