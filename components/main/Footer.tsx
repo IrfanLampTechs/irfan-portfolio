@@ -2,7 +2,7 @@ import React from "react";
 import {
   RxDiscordLogo,
   RxGithubLogo,
-  RxInstagramLogo,
+  // RxInstagramLogo,
   RxTwitterLogo,
   RxLinkedinLogo,
 } from "react-icons/rx";

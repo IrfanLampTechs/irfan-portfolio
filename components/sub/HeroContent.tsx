@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import {
   slideInFromLeft,
-  slideInFromRight,
+  // slideInFromRight,
   slideInFromTop,
 } from "@/utils/motion";
 import Image from "next/image";
@@ -15,7 +15,7 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center md:px-20 px-6 mt-10 sm:mt-32 w-full z-[10]"
+      className="flex flex-row items-center justify-center md:px-20 px-6 mt-10 sm:mt-32 w-full z-[30]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         {/* Mobile-only Image - positioned properly */}
@@ -41,7 +41,7 @@ const HeroContent = () => {
 
         <motion.div
           variants={slideInFromTop}
-          className="mt-[-150px] sm:mt-8 flex flex-col gap-1 sm:gap-3 text-2xl sm:text-4xl md:text-5xl font-bold text-white max-w-[90%] sm:max-w-[100%] md:w-auto md:h-auto sm:w-full"
+          className="mt-[-140px] sm:mt-8 flex flex-col gap-1 sm:gap-3 text-2xl sm:text-4xl md:text-5xl font-bold text-white max-w-[90%] sm:max-w-[100%] md:w-auto md:h-auto sm:w-full"
         >
           <div>Hi, I am</div>
           <div className="text-3xl sm:text-5xl md:text-6xl">Md. Irfan Azad</div>
@@ -99,16 +99,16 @@ const HeroContent = () => {
           >
             Contact me
           </motion.a>
-         <motion.a
-  href="/MdIrfanAzad_Resume.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  variants={slideInFromLeft(1)}
-  className="py-2 px-4 sm:px-6 button-primary text-center text-white
+          <motion.a
+            href="/pop.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            variants={slideInFromLeft(1)}
+            className="py-2 px-4 sm:px-6 button-primary text-center text-white
     cursor-pointer rounded-lg text-sm sm:text-base"
->
-  Resume
-</motion.a>
+          >
+            Resume
+          </motion.a>
         </div>
       </div>
 

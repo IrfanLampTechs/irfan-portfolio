@@ -12,20 +12,19 @@ const Encryption = () => {
           variants={slideInFromTop}
           className="text-[40px] font-medium text-center text-gray-200"
         >
-          Performance
+          About
           <span
             className=" text-transparent bg-clip-text bg-gradient-to-r
           from-purple-500 to-cyan-500"
           >
             {" "}
-            &{" "}
+            Me{" "}
           </span>
-          Security
         </motion.div>
       </div>
 
       <div className="flex flex-col items-center justify-center translate-y-[-50px] absolute z-[20] w-auto h-auto">
-        <div className="flex flex-col items-center group cursor-pointer w-auto h-auto">
+        {/* <div className="flex flex-col items-center group cursor-pointer w-auto h-auto">
           <Image
             src="/LockTop.png"
             alt="Looc top"
@@ -41,8 +40,8 @@ const Encryption = () => {
             height={70}
             className="z-10"
           />
-        </div>
-        <div className="Welcome-box px-[15px] py-[4px] z-[20] border my-[20px] border-[#7042f88b] opacity-[0.9]">
+        </div> */}
+        <div className="mt-28 ml-[-500px] Welcome-box px-[300px] py-[200px] z-[20] border my-[20px] border-[#7042f88b] opacity-[0.9]">
           <h1 className="Welcome-text text-[12px]">Encryption</h1>
         </div>
       </div>
@@ -51,14 +50,14 @@ const Encryption = () => {
           Secure your data with end to end encryption
         </div>
       </div>
-      <div className="w-full flex items-start justify-center absolute">
+      <div className="w-full flex items-start ml-[1300px] absolute">
         <video
           loop
           muted
           autoPlay
           playsInline
           preload="false"
-          className="w-full h-auto"
+          className="w-[800px] h-[1000px]"
           src="encryption.webm"
         />
       </div>
