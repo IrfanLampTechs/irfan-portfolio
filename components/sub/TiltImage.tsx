@@ -13,29 +13,35 @@ const TiltImage = ({
   size?: number;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
+
+  // normalized pointer positions
   const x = useMotionValue(0.5);
   const y = useMotionValue(0.5);
 
-  const springOpts = { stiffness: 600, damping: 8 };
-  const smoothX = useSpring(x, springOpts);
-  const smoothY = useSpring(y, springOpts);
+  // REALLY snappy spring: stiffness ↑↑, damping ↓, mass a bit lighter
+  const springConfig = { stiffness: 2000, damping: 15, mass: 0.3 };
+  const smoothX = useSpring(x, springConfig);
+  const smoothY = useSpring(y, springConfig);
 
-  // Amplify tilt for depth
-  const rotateY = useTransform(smoothX, [0, 1], [-25, 25]);
-  const rotateX = useTransform(smoothY, [0, 1], [25, -25]);
+  // map to a wider rotation
+  const rotateY = useTransform(smoothX, [0, 1], [-35, 35]);
+  const rotateX = useTransform(smoothY, [0, 1], [35, -35]);
 
+  // zoom a little more on hover
+  const baseScale = useTransform(smoothY, [0, 1], [1.03, 1.08]);
+
+  // track whether pointer is over so we can jump back
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!ref.current) return;
     const { left, top, width, height } = ref.current.getBoundingClientRect();
-    const xNorm = (e.clientX - left) / width;
-    const yNorm = (e.clientY - top) / height;
-    x.set(xNorm);
-    y.set(yNorm);
+    x.set((e.clientX - left) / width);
+    y.set((e.clientY - top) / height);
   };
 
   const handleMouseLeave = () => {
-    x.set(0.5);
-    y.set(0.5);
+    // snap back instantly
+    x.jump(0.5);
+    y.jump(0.5);
   };
 
   return (
@@ -46,17 +52,18 @@ const TiltImage = ({
       style={{
         rotateX,
         rotateY,
-        perspective: 1000,
+        scale: baseScale,
         transformStyle: "preserve-3d",
+        perspective: 1200,
       }}
-      className="w-fit rounded-full shadow-xl transition-transform duration-300"
+      className="w-fit rounded-full shadow-2xl"
     >
       <Image
         src={src}
         alt={alt}
         width={size}
         height={size}
-        className="rounded-full border border-[#7042f88b] shadow-lg"
+        className="rounded-full border border-[#7042f88b] shadow-[0_0_20px_rgba(112,66,248,0.5)]"
       />
     </motion.div>
   );
