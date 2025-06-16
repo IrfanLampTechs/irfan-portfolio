@@ -20,7 +20,7 @@ const Navbar = () => {
               className="block md:hidden p-2 rounded-full border border-[#7042f861] bg-[#06031a5e] mr-[15px] px-[20px] py-[10px]"
             >
               <Image
-                src="/I_logo-2.png"
+                src="/I_logo-2_3.png"
                 alt="logo"
                 width={150}
                 height={140}
@@ -30,7 +30,7 @@ const Navbar = () => {
 
             {/* Optional: Keep desktop logo version */}
             <Image
-              src="/I_logo-2.png"
+              src="/I_logo-2_3.png"
               alt="logo"
               width={170}
               height={160}
@@ -97,7 +97,7 @@ const Navbar = () => {
             className="flex items-center"
           >
             <Image
-              src="/I_logo-2.png"
+              src="/I_logo-2_3.png"
               alt="logo"
               width={70}
               height={70}
