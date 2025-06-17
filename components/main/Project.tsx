@@ -33,68 +33,93 @@ const Project = () => {
 
   const projects = [
     {
-      src: "/NextWebsite.png",
-      title: "Modern Next.js Portfolio",
+      src: "/yaabi.png",
+      title: "YAABI",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      link_address: "https://lamptechs.com/",
+        "This marketing software was developed using Laravel, with a RESTful API powering the backend. I was responsible for the backend development of this project, where I implemented a range of essential features to streamline customer engagement and advertising workflows. I built the functionality for uploading customer data through Excel files and integrated third-party APIs such as DX and Tixly to fetch customer information in real-time. I also developed a domain verification system to ensure secure communication. The system allows users to send targeted emails and SMS messages based on customer lists, tags, and segments. To handle high-volume operations efficiently, I implemented Laravel queue jobs for bulk customer data insertion and automated the scheduling of newsletters and SMS campaigns. Additionally, I integrated SparkPost APIs to track detailed email engagement metrics, such as opens, clicks, views, and bounces, providing accurate insights for advertising effectiveness.",
+      link_address: "https://yaabi.io/",
     },
     {
-      src: "/CardImage.png",
-      title: "Interactive Website Cards",
+      src: "/smart_nir.png",
+      title: "Smart Nir",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      link_address: "https://www.prothomalo.com/",
+      link_address: "https://smartnir.com/",
     },
     {
-      src: "/SpaceWebsite.png",
-      title: "Space Themed Website",
+      src: "/vloo.png",
+      title: "VLOO",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      link_address: "https://lamptechs.com/",
+      link_address: "https://vloo-fe-redesign.vercel.app/",
     },
     {
-      src: "/NextWebsite.png",
+      src: "/oggato.PNG",
+      title: "Oggato",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      link_address: "https://oggato-fe.vercel.app/",
+    },
+    {
+      src: "/deshi_trust.PNG",
+      title: " Deshi Trust",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      link_address: "https://deshitrust.com/",
+    },
+    {
+      src: "/next_js_project.PNG",
       title: "Modern Next.js Portfolio",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       link_address: "",
     },
     {
-      src: "/CardImage.png",
-      title: "Interactive Website Cards",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      link_address: "",
-    },
-    {
-      src: "/SpaceWebsite.png",
+      src: "/advisor_bd.PNG",
       title: "Space Themed Website",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 
-      link_address: "",
+      link_address: "https://www.adviserbangladesh.com/",
     },
+
     {
-      src: "/NextWebsite.png",
-      title: "Modern Next.js Portfolio",
+      src: "/times_project.PNG",
+      title: "Times Group BD",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      link_address: "",
+      link_address: "https://timesgroupbd.com/",
     },
     {
-      src: "/CardImage.png",
-      title: "Interactive Website Cards",
+      src: "/promantra.PNG",
+      title: "Promantra",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      link_address: "",
+      link_address: "https://promantraa.com/",
+    },
+
+    {
+      src: "/lamptechs.PNG",
+      title: "Lamp Techs",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      link_address: "https://lamptechs.com/",
     },
     {
-      src: "/SpaceWebsite.png",
-      title: "Space Themed Website",
+      src: "/hrm.PNG",
+      title: "HRMatrix",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      link_address: "",
+      link_address: "https://hr-matrix.vercel.app/",
+    },
+
+    {
+      src: "/lgestic_template.PNG",
+      title: "Logistics website template",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      link_address:
+        "https://irfanazad588.github.io/Logistics-website-template/",
     },
   ];
 
