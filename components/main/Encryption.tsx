@@ -7,7 +7,6 @@ import {
   slideInFromTop,
 } from "@/utils/motion";
 
-import Image from "next/image";
 import TiltImage from "../sub/TiltImage";
 
 const Encryption = () => {

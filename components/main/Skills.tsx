@@ -3,7 +3,7 @@ import {
   Frontend_skill,
   Full_stack,
   Other_skill,
-  Skill_data,
+
 } from "@/constants";
 // import { scale } from "framer-motion";
 import React from "react";

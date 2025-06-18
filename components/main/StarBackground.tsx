@@ -1,30 +1,26 @@
+// components/main/StarBackground.tsx
 "use client";
 
 import React, { useState, useRef, Suspense } from "react";
+import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
-// @ts-ignore
+// @ts-expect-error maath/random has no TypeScript definitions
 import * as random from "maath/random/dist/maath-random.esm";
 
-const StarBackground = (props: any) => {
-  const ref: any = useRef();
+const StarBackground = (props: Record<string, unknown>) => {
+  const ref = useRef<THREE.Points>(null!);
 
-  // ─── Generate 5,000 points → need 5,000 * 3 floats (x, y, z)
+  // Generate 5,000 points → need 5,000 * 3 floats (x, y, z)
   const [positions] = useState(() =>
     random.inSphere(new Float32Array(5000 * 3), { radius: 1.2 })
   );
 
-  // sanity checks (you can remove these once things are green)
-  //   if (positions.some((v) => isNaN(v))) {
-  //     console.error("❌ Float32Array contains NaN values!");
-  //   }
-  //   if (positions.length % 3 !== 0) {
-  //     console.error("❌ Vertex data length is not divisible by 3");
-  //   }
-
   useFrame((_, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    if (ref.current) {
+      ref.current.rotation.x -= delta / 10;
+      ref.current.rotation.y -= delta / 15;
+    }
   });
 
   return (
@@ -38,9 +34,9 @@ const StarBackground = (props: any) => {
       >
         <PointMaterial
           transparent
-          color="#fff" // ← use a valid CSS/hex color
+          color="#fff"
           size={0.002}
-          sizeAttenuation={true}
+          sizeAttenuation
           depthWrite={false}
         />
       </Points>

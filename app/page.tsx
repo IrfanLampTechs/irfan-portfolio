@@ -1,5 +1,5 @@
 import Encryption from "@/components/main/Encryption";
-import Footer from "@/components/main/Footer";
+
 import Hero from "@/components/main/Hero";
 import Message from "@/components/main/Message";
 import Project from "@/components/main/Project";
