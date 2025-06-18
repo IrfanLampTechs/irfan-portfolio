@@ -55,7 +55,11 @@ const ProjectCard = ({ src, title, description, link_address }: Props) => {
       {/* Modal */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0A0118] bg-opacity-60">
-          <div className="bg-[#0A0118] rounded-lg p-6 w-[250px] sm:w-[800px] relative shadow-lg border border-purple-600 max-h-[90vh] overflow-y-auto ml-0 sm:ml-[-57px]">
+          <div
+            className="bg-[#0A0118] rounded-lg p-6 w-[350px] 
+          sm:w-[800px] relative shadow-lg border border-purple-600 max-h-[90vh] 
+          overflow-y-auto "
+          >
             <button
               onClick={() => setIsOpen(false)}
               className="absolute top-2 right-3 text-gray-400 hover:text-white text-xl"

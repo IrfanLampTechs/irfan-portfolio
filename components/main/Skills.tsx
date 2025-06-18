@@ -15,11 +15,11 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center relative pb-16 py-10 overflow-visible"
+      className="flex flex-col items-center justify-center relative pb-16 py-10 overflow-visible "
     >
       <SkillText />
 
-      <div className=" flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      {/* <div className=" flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
         {Skill_data.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -29,7 +29,7 @@ const Skills = () => {
             index={index}
           />
         ))}
-      </div>
+      </div> */}
 
       <div className=" flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
         {Frontend_skill.map((image, index) => (

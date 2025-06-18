@@ -89,6 +89,7 @@ const HeroContent = () => {
             variants={slideInFromLeft(1)}
             className="py-2 px-4 sm:px-6 button-primary text-center text-white 
               cursor-pointer rounded-lg text-sm sm:text-base"
+              href="#contact"
           >
             Hire me
           </motion.a>
@@ -96,6 +97,7 @@ const HeroContent = () => {
             variants={slideInFromLeft(1)}
             className="py-2 px-4 sm:px-6 button-primary text-center text-white
               cursor-pointer rounded-lg text-sm sm:text-base"
+              href="#contact"
           >
             Contact me
           </motion.a>
