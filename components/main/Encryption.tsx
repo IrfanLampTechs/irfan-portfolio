@@ -35,8 +35,9 @@ const Encryption = () => {
           </motion.div>
         </div>
 
-        <div className="flex flex-col items-center justify-center  absolute z-[30] w-full px-4">
-          <div className="mt-52 sm:mt-[-350] Welcome-box w-full max-w-[360px] sm:max-w-5xl border border-[#7042f88b] opacity-[0.9] p-4 sm:p-6 flex flex-col md:flex-row items-center gap-6">
+        <div className="mt-52 sm:mt-[-150px] flex flex-col items-center justify-center  absolute z-[30] w-full px-4">
+          <div className=" Welcome-box w-full max-w-[360px] sm:max-w-5xl border border-[#7042f88b] opacity-[0.9] 
+          p-4 sm:p-6 flex flex-col md:flex-row items-center gap-6">
             {/* Image (top on mobile, right on desktop) */}
 
             <motion.div
