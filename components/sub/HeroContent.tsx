@@ -102,7 +102,7 @@ const HeroContent = () => {
             Contact me
           </motion.a>
           <motion.a
-            href="/pop.pdf"
+            href="/MdIrfanAzad_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             variants={slideInFromLeft(1)}
